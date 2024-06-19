@@ -1,0 +1,160 @@
+body{
+    font-family: "ChavesYike", Courier, monospace;
+    background: var(--cor-verde-claro);
+}
+
+body::before{
+    content: '';
+    background-image: url(../img/fundo.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+}
+
+main{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.cabecalho {
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.titulo {
+    color: var(--cor-titulo-fraco);
+    font-size: 70px;
+    line-height: 100px;
+    -webkit-text-stroke: 2px var(--cor-titulo-forte);
+}
+
+.selecao-de-personagens {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.selecao-de-personagens .personagem-grande{
+    text-align: center;
+    width: 25%;
+    height: 70vh;
+    position: relative;
+}
+
+.selecao-de-personagens .personagem-grande img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.selecao-de-personagens .personagem-grande .nome::before{
+    content: '';
+    height: 15px;
+    width: 100%;
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+}
+
+.selecao-de-personagens .personagem-grande .nome h2 {
+    color: var(--cor-titulo-forte);
+    font-family: 'Carton', serif;
+    position: absolute;
+    bottom: -18px;
+    width: 100%;
+    font-size: 34px;
+    -webkit-text-stroke: 1px white;
+}
+
+.selecao-de-personagens .personagem-grande.personagem-jogador-1 .nome::before{
+    background-color: var(--cor-verde-limao);
+}
+
+.selecao-de-personagens .personagem-grande.personagem-jogador-2 .nome::before{
+    background-color: var(--cor-azul-escuro);
+}
+
+.selecao-de-personagens .lista-de-personagens {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 600px;
+    justify-content: center;
+    gap: 12px;
+}
+
+.selecao-de-personagens .lista-de-personagens a .personagem {
+    border: 2px solid var(--cor-padrao);
+    background-color: var(--cor-padrao);
+    width: 100%;
+    height: 120px;
+    cursor: pointer;
+    z-index: 2;
+    border-radius: 5px;
+    position: relative;
+    transition: 0.15 ease-in-out;
+}
+
+.selecao-de-personagens .lista-de-personagens a .personagem img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.selecao-de-personagens .lista-de-personagens a .personagem.selecionado {
+    border: 2px solid var(--cor-azul-claro);
+    animation: c-glowing-green .3s ease-in-out infinite;
+    animation-direction: alternate;
+}
+
+.selecao-de-personagens .lista-de-personagens a .personagem:hover{
+    animation: c-glowing-green .3s ease-in-out infinite;
+    animation-direction: alternate;
+    transform: scale(1.07);
+    z-index: 2;
+}
+
+.selecao-de-personagens .lista-de-personagens a .personagem.jogador-2-selecionado{
+    border: 2px solid var(--cor-azul-escuro);
+    animation: c-glowing-blue .3s ease-in-out infinite;
+    -o-animation-direction: alternate;
+} 
+
+.selecao-de-personagens .lista-de-personagens a .personagem.personagem.jogador-2-selecionado:hover{
+    animation: c-glowing-blue .3s ease-in-out infinite;
+    animation-direction: alternate;
+    transform: scale(1.07);
+    z-index: 2;
+}
+
+.selecao-de-personagens .lista-de-personagens a .personagem .tag {
+    display: none;
+    font-family: 'Times New Roman', Times, serif;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    color: var(--cor-azul-escuro);
+    transition: opacity .3s ease-in-out;
+    animation-direction: alternate;
+}
+
+.selecao-de-personagens .lista-de-personagens a .personagem.selecionado .tag{
+    display: block;
+    animation: text-glowing-blue .3s ease-in-out infinite;
+    animation-direction: alternate;
+}
+
+.selecao-de-personagens .lista-de-personagens a .personagem.personagem.jogador-2-selecionado .tag{
+    display: block;
+    animation: text-glowing-red .3s ease-in-out infinite;
+    animation-direction: alternate;
+}
+
+audio{
+    display: none;
+}

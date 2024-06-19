@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: url('../taco.png');
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: aqua;
+}
+
+.mesa {
+    width: 750px;
+    height: 450px;
+    background-color: rgb(62, 55, 14);
+    background-color: rgb(208, 204, 102);
+}

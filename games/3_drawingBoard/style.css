@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'Carton';
+    src: url('./fontes/Carton.ttf');
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('./img/fundo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    color: rgb(55, 255, 0);
+    margin-bottom: 10px;
+    font-family: 'Carton';
+    font-size: 50px;
+    text-shadow: 3px 3px #000000;
+}
+#tela {
+    border: 2px solid #000;
+    background-color: #fff;
+    border: 2px solid rgb(0, 0, 0);
+    cursor: url(./img/cursor/pincel.cur), default;
+}
+.colorArea {
+    width: 800px;
+    display: flex;
+    margin-left: 60px;
+    margin-top: 10px;
+}
+.color {
+    flex: 1;
+    height: 40px;
+    cursor: pointer;
+}
+.color.active {
+    border: 5px solid #FFF;
+}
+
+.quadro {
+    display: flex;
+    flex-direction: row;
+}
+.ferramentas {
+    background-color: #a2864e;
+    margin: 10px;
+    border: 2px solid white;
+}
+.ferramenta{
+    padding: 5px;
+    cursor: pointer;
+}
+.ferramenta img{
+    width: 24px;
+}
+
+.ferramenta:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+.ferramentas input{
+    margin-top: 60px;
+    margin-left: -47px;
+    margin-right: -47px;
+    transform: rotate(270deg);
+}
+
+.ferramentas #tamanhoBorracha{
+    display: none;
+}
+
+.ferramenta.download {
+    margin-top: 120px;
+}

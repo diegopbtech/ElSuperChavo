@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz da Turma do Chaves</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../../css/games.css">
+    <link rel="shortcun icon" href="../../img/quizChavo.jpg">
+</head>
+<body>
+    <div class="progress">
+        <div class="progress--bar"></div>
+    </div>
+    <div class="back">
+        <a href="../../index.html" class="back">
+            <img src="../../img/home.png">
+        </a>
+    </div>
+    <main>
+        <div class="menuInicial">
+            <div class="cabecalho">
+                <h1>Quiz da Turma do Chaves</h1>
+            </div>
+            <div class="dados">
+                <input type="text" id="nome" placeholder="Digite seu nome">
+                <div class="alerta">
+                    INSIRA SEU NOME!!!
+                </div>
+            </div>
+            <div class="btnIniciar">
+                <button id="comecar">Começar</button>
+            </div>
+        </div>
+        <div class="sejaBemVindo">
+            <h1>Vamos la!</h1>
+            <span>Será mesmo que você conhece a turma do Chaves?</span>
+        </div>
+        <div class="quiz">
+            <div class="question">...</div>
+            <div class="alternativas"></div>
+        </div>
+        <div class="result">
+            <h1>Parabens | Boa | Vai ter que assistir um pouco mais </h1>
+            <div class="porcentagem">Acertou 99%</div>
+            <img id="desempenho" src="./img/vitoria.png">
+            <div class="pontuacao">Você acertou 8 de 10 perguntas!</div>
+            <div>
+                <button id="reiniciar">Mais uma vez</button>
+                <button id="finalizar">Desisto!</button>
+            </div>
+        </div>
+    </main>
+    <script src="./questions.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>

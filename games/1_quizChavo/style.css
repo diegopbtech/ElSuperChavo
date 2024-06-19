@@ -1,0 +1,256 @@
+@font-face {
+    font-family: 'Carton';
+    src: url('./fontes/Carton.ttf');
+}
+
+@font-face {
+    font-family: 'Yilke';
+    src: url('./fontes/Yikes.TTF');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(120, 253, 116);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    align-items: center;
+    background-image: url('./img/fundo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.4;
+    width: 100%;
+    height: 100%;
+}
+
+main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.menuInicial {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cabecalho {
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    height: 200px;
+}
+
+h1{
+    font-family: 'Yilke';
+    font-size: 60pt;
+    color: #f9fb07;
+    -webkit-text-stroke: 1px #ce3b0f;
+    height: 40%;
+}
+
+.dados {
+    z-index: 1;
+    margin-top: 120px;
+}
+
+.alerta {
+    background-color: #ff0000;
+    padding: 10px;
+    margin: 10px;
+    font-size: 10pt;
+    border-radius: 4px;
+    color: #fff;
+    opacity: 0;
+    text-align: center;
+    transition: all 1s;
+}
+
+.dados input {
+    text-align: center;
+    border: none;
+    width: 300px;
+    height: 40px;
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 20px;
+    background-color: rgba(0, 255, 8, 0.704);
+    color: black;
+}
+
+.dados input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+.btnIniciar {
+    margin-top: 70px;
+    z-index: 2;
+}
+
+button#comecar {
+    cursor: pointer;
+    background-color: aqua;
+    font-size: 15pt;
+    border-radius: 20px;
+    width: 160px;
+    height: 30px;
+    border: none;
+}
+
+button#comecar:hover {
+    background-color: rgb(255, 145, 0);
+    transition: all 0.5s;
+}
+
+.sejaBemVindo {
+    z-index: 1;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: all 0.5s;
+}
+
+.sejaBemVindo h1 {
+    margin: 24px;
+}
+
+.sejaBemVindo span {
+    font-family: 'Carton';
+    color: #003d09;
+    font-size: 30px;
+}
+
+.quiz {
+    z-index: 1;
+    background-color: rgb(40, 79, 0);
+    border-radius: 10px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 600px;
+    height: 400px;
+    padding: 40px;
+    border: 4px solid #8df78f;
+}
+
+.question {
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    margin: 20px;
+    text-align: center;
+}
+
+.alternativas option{
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    background-color: #8df78f;
+    border-radius: 20px;
+    transition: all 1s;
+}
+
+.alternativas option:hover{
+    padding: 10px;
+    margin: 10px;
+    background-color: #06eb0a;
+    cursor: pointer;
+}
+
+.progress {
+    height: 10px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+.progress--bar {
+    width: 0%;
+    background-color: #f6ff00;
+    height: 100%;
+    transition: all ease .5s;
+}
+
+.result {
+    z-index: 1;
+    background-color: rgb(40, 79, 0);
+    border-radius: 10px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 600px;
+    height: 400px;
+    padding: 40px;
+    border: 4px solid #8df78f;
+    text-align: center;
+    transition: all 1s;
+}
+
+.result h1{
+    font-size: 40pt;
+    color: #31f445;
+    -webkit-text-stroke: 0px;
+}
+
+.result img {
+    width: 100px;
+}
+
+.porcentagem {
+    margin: -20px;
+    font-family: 'Carton';
+    font-size: 100px;
+    color: #f6ff00;
+    -webkit-text-stroke: 1px #ce3b0f;
+}
+
+.pontuacao {
+    color: #ffffff;
+}
+
+button#reiniciar {
+    cursor: pointer;
+    background-color: aqua;
+    font-size: 15pt;
+    border-radius: 20px;
+    width: 160px;
+    height: 30px;
+    border: none;
+}
+
+button#reiniciar:hover {
+    background-color: rgb(38, 255, 0);
+    transition: all 0.5s;
+}
+
+button#finalizar {
+    cursor: pointer;
+    background-color: rgb(255, 0, 0);
+    font-size: 15pt;
+    border-radius: 20px;
+    width: 160px;
+    height: 30px;
+    border: none;
+}
+
+button#finalizar:hover {
+    background-color: rgb(38, 255, 0);
+    transition: all 0.5s;
+}

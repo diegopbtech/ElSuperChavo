@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Chavo</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../../css/games.css">
+    <link rel="shortcun icon" href="../../img/hangmanChavo.jpg">
+</head>
+<body>
+    <div class="back">
+        <a href="../../index.html" class="back">
+            <img src="../../img/home.png">
+        </a>
+    </div>
+    <div id="gameover" class="gameover">
+        <h1>GAME OVER!!!</h1>
+        <img src="../../img/gameover.png" alt="">
+        <button onclick="inicia()">Reiniciar</button>
+    </div>
+    <div class="tela"> 
+        <div id="titulo" class="titulo">
+            Jogo da Forca
+            <img src="./chavo.png" alt="">
+        </div>
+        <div class="dvDisplay">
+            <input type="text" id="letra0" disabled class="letra" maxlength="1">
+            <input type="text" id="letra1" disabled class="letra" maxlength="1">
+            <input type="text" id="letra2" disabled class="letra" maxlength="1">
+            <input type="text" id="letra3" disabled class="letra" maxlength="1">
+            <input type="text" id="letra4" disabled class="letra" maxlength="1">
+            <input type="text" id="letra5" disabled class="letra" maxlength="1">
+            <input type="text" id="letra6" disabled class="letra" maxlength="1">
+            <input type="text" id="letra7" disabled class="letra" maxlength="1">
+            <input type="text" id="letra8" disabled class="letra" maxlength="1">
+            <input type="text" id="letra9" disabled class="letra" maxlength="1">
+            <input type="text" id="letra10" disabled class="letra" maxlength="1">
+            <input type="text" id="letra11" disabled class="letra" maxlength="1">
+            <input type="text" id="letra12" disabled class="letra" maxlength="1">
+            <input type="text" id="letra13" disabled class="letra" maxlength="1">
+            <input type="text" id="letra14" disabled class="letra" maxlength="1">
+            <input type="text" id="letra15" disabled class="letra" maxlength="1">
+            <input type="text" id="letra16" disabled class="letra" maxlength="1">
+            <input type="text" id="letra17" disabled class="letra" maxlength="1">
+            <input type="text" id="letra18" disabled class="letra" maxlength="1">
+            <input type="text" id="letra19" disabled class="letra" maxlength="1">
+        </div>
+        <div class="dvDisplay">
+            <div id="jogador">
+                <label for="letraJog">DIGITE UMA LETRA:</label>
+            </div>
+            <div class="controle">
+                <button onclick="inicia()" id="jogar" class="jogar">Jogar</button>
+                <button id="reiniciar" class="reiniciar" onclick="inicia()">Reiniciar</button>
+                <button id="dica" class="dicaButton" onclick="dica()">Dicas [10]</button>
+            </div><br>
+            <div id="letrasDigitadas">Letras Digitadas:</div>
+            <div id="forca">
+                <div id="cabeca"></div>
+                <div id="corpo"></div>
+                <div id="bracoE"></div>
+                <div id="bracoD"></div>
+                <div id="pernaE"></div>
+                <div id="pernaD"></div>
+                <div id="olhos">
+                    <span>X</span>
+                    <span>X</span>
+                    <div class="boca"></div>
+                </div>
+            </div>
+            <div id="pontos">
+                ACERTOS:
+            </div>
+        </div>
+        <div id="dica"></div>
+    </div>
+    <script src="./biblioteca.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>

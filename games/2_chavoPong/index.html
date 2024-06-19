@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chavo Pong</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../../css/games.css">
+    <link rel="shortcun icon" href="../../img/chavoPong.jpg">
+</head>
+<body>
+    <div class="back">
+        <a href="../../index.html" class="back">
+            <img src="../../img/home.png">
+        </a>
+    </div>
+    <div class="campeao">
+        <h1>É CAMPEÃOOOOOO!!!</h1>
+        <img src="./img/chaves-vitoria.png" alt="">
+        <button onclick="reiniciar()">Reiniciar</button>
+    </div>
+    <div class="gameover">
+        <h1>GAME OVER!!!</h1>
+        <img src="./img/gameover.png" alt="">
+        <button onclick="reiniciar()">Reiniciar</button>
+    </div>
+    <div class="fundo"></div>
+    <div class="campo">
+        <div class="linha"></div>
+        <div id="bola" class="bolinha"></div>
+        <div id="jogador" class="barra esquerda"></div>
+        <div id="cpu" class="barra direita"></div>
+    </div>
+    <div class="painel">
+        <div id="pontosJog" class="resultado jogador">0</div>
+        <div id="pontosCpu" class="resultado cpu">0</div>
+    </div>
+    <div class="sets jogador">
+        <img id="iconeJogador" src="./img/personagens/chavo.jpg">
+        <span id="setJogador">0</span>
+    </div>
+    <div class="sets cpu">
+        <img id="iconeCPU" src="./img/personagens/kiko.jpg">
+        <span id="setCPU">0</span>
+    </div>
+    <div class="menu">
+        <h1 id="titulo">Primeira Fase</h1>
+        <button id="btnComeca" >Começar Campanha</button>
+    </div>
+    <script src="./fase.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>

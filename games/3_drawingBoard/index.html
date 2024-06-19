@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draw Arte - Chavo</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../../css/games.css">
+    <link rel="shortcun icon" href="../../img/drawArte.jpg">
+</head>
+<body>
+    <h1>Draw - Faça a sua Arte!</h1>
+    <div class="back">
+        <a href="../../index.html" class="back">
+            <img src="../../img/home.png">
+        </a>
+    </div>
+    <div class="quadro">
+        <div class="ferramentas">
+            <div class="ferramenta pincel">
+                <img src="./img/icon/pincel.png" alt="">
+            </div>
+            <div class="ferramenta borracha">
+                <img src="./img/icon/clear.png" alt="">
+            </div>
+            <div class="ferramenta tinta">
+                <img src="./img/icon/tinta.png" alt="">
+            </div>
+            <div class="ferramenta clear">
+                <img src="./img/icon/limpar.png" alt="">
+            </div>
+            <div>
+                <input type="range" value="4" min="1" max="100" id="tamanho" onmouseup="atualizaTamanho()">
+                <input type="range" value="2" min="1" max="10" id="tamanhoBorracha" onmouseup="atualizaTamanhoBorracha()">
+            </div>
+            <div class="ferramenta download">
+                <img src="./img/icon/download.png" alt="">
+            </div>
+        </div>
+        <canvas id="tela" width="800" height="400"></canvas>
+    </div>
+
+    <div class="colorArea">
+        <div data-color="#000000" style="background-color: #000000" class="color active"></div>
+        <div data-color="#0000ff" style="background-color: #0000ff" class="color"></div>
+        <div data-color="#ff0000" style="background-color: #ff0000" class="color"></div>
+        <div data-color="#008000" style="background-color: #008000" class="color"></div>
+        <div data-color="#ffff00" style="background-color: #ffff00" class="color"></div>
+        <input id="cores" class="mudarCor" type="color">
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

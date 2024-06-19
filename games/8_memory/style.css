@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(120, 253, 116);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    background-image: url('./img/fundo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.4;
+    width: 100%;
+    height: 100%;
+}
+
+main{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cabecalho {
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    font-family: "ChavesYike", Courier, monospace;
+}
+
+.titulo {
+    color: var(--cor-titulo-fraco);
+    font-size: 70px;
+    line-height: 100px;
+    -webkit-text-stroke: 2px var(--cor-titulo-forte);
+}
+
+.jogo {
+    max-width: 50%;
+    z-index: 1;
+    background-color: rgb(40, 79, 0);
+    border-radius: 8px;
+    padding: 20px;
+    border: 4px solid #8df78f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.jogo .cartas {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 600px;
+    justify-content: center;
+    gap: 12px;
+}
+
+.jogo .cartas .carta {
+    max-width: 20%;
+    max-height: 20%;
+    cursor: pointer;
+    z-index: 2;
+    border-radius: 5px;
+    position: relative;
+    transition: 0.15 ease-in-out;
+}
+
+.jogo .cartas .carta img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.selecao-de-personagens .lista-de-personagens .personagem.selecionado {
+    border: 2px solid var(--cor-azul-claro);
+    animation: c-glowing-green .3s ease-in-out infinite;
+    animation-direction: alternate;
+}
+
+.jogo .cartas .carta:hover{
+    animation: c-glowing-green .3s ease-in-out infinite;
+    animation-direction: alternate;
+    transform: scale(1.07);
+    z-index: 2;
+}
+
+.fim {
+    width: 600px;
+    height: 400px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px;
+}
+
+.fim h1{
+    font-family: 'Carton';
+    font-size: 60px;
+    color: #ffff00;
+    -webkit-text-stroke: 0.2px rgb(253, 139, 0);
+}
+
+.fim span {
+    margin: 20px;
+}
+
+button.recomecar {
+    cursor: pointer;
+    background-color: aqua;
+    font-size: 10pt;
+    border-radius: 20px;
+    width: 160px;
+    height: 30px;
+    border: none;
+}
+
+button.recomecar:hover {
+    background-color: rgb(38, 255, 0);
+    transition: all 0.5s;
+}
+
+.gameover {
+    z-index: 99;
+    position: absolute;
+    width: 600px;
+    height: 400px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Carton';
+    color: chartreuse;
+    font-size: 40px;
+    background-color: rgb(40, 79, 0);
+    border: 4px solid #8df78f;
+}
+
+.gameover img{
+    width: 40%;
+}
+
+.gameover button{
+    font-size: 50%;
+    width: 120px;
+    height: 30px;
+    border-radius: 100px;
+    border: none;
+    background-color: aquamarine;
+    cursor: pointer;
+    margin: 10px;
+}
+
+button:hover {
+    border: 1px solid black;
+    background-color: rgb(0, 156, 104);
+}

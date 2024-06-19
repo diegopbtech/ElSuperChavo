@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(120, 253, 116);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    background-image: url('../../img/fundo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.4;
+    width: 100%;
+    height: 100%;
+}
+
+main{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cabecalho {
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    font-family: "ChavesYike", Courier, monospace;
+}
+
+.titulo {
+    color: var(--cor-titulo-fraco);
+    font-size: 50px;
+    line-height: 100px;
+    -webkit-text-stroke: 2px var(--cor-titulo-forte);
+}
+
+.jogo {
+    min-width: 50%;
+    max-width: 50%;
+    z-index: 1;
+    background-color: rgb(40, 79, 0);
+    border-radius: 8px;
+    padding: 4%;
+    border: 4px solid #8df78f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+span {
+    color: #fff;
+    margin: 10px;
+    text-align: justify;
+}
